@@ -1,22 +1,48 @@
-var ul = document.getElementById('lists');
-  var btn2= document.getElementById("btn");
-      btn2.addEventListener("click",function addelement(){
-  var inputvalue= document.getElementById("input").value;
-  var text=document.createTextNode(inputvalue);
-     if(inputvalue===""){
-      alert("write something");
+                                      /*click event*/
+  let Ul = document.getElementById('lists');
+  let Btn2= document.getElementById("btn");
+      Btn2.addEventListener("click",function Addelement(){
+  let Inputvalue= document.getElementById("input").value;
+  let Text=document.createTextNode(Inputvalue);
+     if(Inputvalue===""){
+      alert("Write something");
      }
     else{
-       li =document.createElement("li");
-      var checkbox = document.createElement("input");
-        checkbox.type = 'checkbox';
-     checkbox.setAttribute('id','check');
-    var label = document.createElement('label');
-    ul.appendChild(label);  
-    li.appendChild(checkbox);
-   label.appendChild(text);
-   
-   li.appendChild(label);
-   ul.appendChild(li);
+       let Li =document.createElement("li");
+      let Checkbox = document.createElement("input");
+        Checkbox.type = 'checkbox';
+     Checkbox.setAttribute('id','check');
+    let Label = document.createElement('label');
+    Ul.appendChild(Label);
+    Li.appendChild(Checkbox);
+	Li.appendChild(Label);	
+   Label.appendChild(Text);
+   Ul.appendChild(Li);
  }
   })
+                                             /*keyup event*/
+var Input2= document.getElementById("input");
+   Input2.addEventListener('keyup',function(e){
+    if (e.keyCode === 13) {
+   var Inputvalue= document.getElementById("input").value;
+   var Text=document.createTextNode(Inputvalue);
+     if(Inputvalue===""){
+      alert("Write something");
+     }
+	 else{
+       Li =document.createElement("li");
+      var Checkbox = document.createElement("input");
+        Checkbox.type = 'checkbox';
+     Checkbox.setAttribute('id','check');
+    var Label = document.createElement('label');
+    Ul.appendChild(Label);	
+    Li.appendChild(Checkbox);
+	Li.appendChild(Label);
+   Label.appendChild(Text);
+   Ul.appendChild(Li);
+ }
+  }
+	  })
+  
+  
+  
